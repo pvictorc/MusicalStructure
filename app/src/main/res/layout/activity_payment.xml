@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label_yourmusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Music"
+        android:padding="8dp"
+        android:textSize="16dp"/>
+
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview1_1"
+        android:layout_gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp"
+        android:onClick="onClickListenerPlayer">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/album1"/>
+
+
+        <TextView
+            android:id="@+id/label_album1"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+            android:background="#7000"
+            android:maxLines="1"
+            android:text="The Weeknd"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/label_newmusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discover New Music"
+        android:padding="8dp"
+        android:textSize="16dp"/>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview2_1"
+        android:layout_gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/info_text3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Teste3"/>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
