@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
         cv11.setOnClickListener(myMusicListener);
 
 
+        View.OnClickListener newMusicListener = new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent payment = new Intent(MainActivity.this,PaymentActivity.class);
+                startActivity(payment);
+            }
+        };
+
+        CardView cv21 = (CardView) findViewById(R.id.cardview2_1);
+        cv21.setOnClickListener(newMusicListener);
     }
 
 }

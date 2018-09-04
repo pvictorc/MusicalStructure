@@ -18,7 +18,10 @@
         </activity>
         <activity
             android:name=".PlayerActivity"
-            android:label="player"
+            android:label="Music Player"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".PaymentActivity"
+            android:label="Payment"
             android:parentActivityName=".MainActivity">
         </activity>
     </application>

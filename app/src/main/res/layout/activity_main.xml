@@ -1,134 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_shadow_end_color">
+        android:background="@color/cardview_shadow_end_color"/>
 
-    </SearchView>
+        <TextView
+            android:id="@+id/label_yourmusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Music"
+            android:padding="8dp"
+            android:textSize="16dp"/>
 
-    <TextView
-        android:id="@+id/label_yourmusic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your Music"
-        android:padding="8dp"
-        android:textSize="16dp"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            <!-- A CardView that contains a TextView -->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview1_1"
+                android:layout_gravity="left"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="4dp">
 
-        <!-- A CardView that contains a TextView -->
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardview1_1"
-            android:layout_gravity="left"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            card_view:cardCornerRadius="4dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/album11"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/album1"/>
+                <TextView
+                    android:id="@+id/label_album1"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/cardShadow"
+                    android:maxLines="1"
+                    android:text="The Weeknd"/>
 
-            <TextView
-                android:id="@+id/label_album1"
-                android:gravity="bottom"
-                android:layout_gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:textColor="@android:color/white"
-                android:background="@color/cardShadow"
-                android:maxLines="1"
-                android:text="The Weeknd"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/play_circle"/>
 
-            <ImageView
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview1_2"
+                android:layout_gravity="left"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/album12"
+                    android:background="@android:color/darker_gray"/>
+
+
+                <TextView
+                    android:id="@+id/label_album1_2"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/cardShadow"
+                    android:maxLines="1"
+                    android:text="Drake (Just mock)..."/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardview1_3"
+                android:layout_gravity="left"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/label_album1_3"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/cardShadow"
+                    android:maxLines="1"
+                    android:text="(Just mock)..."/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/label_newmusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discover New Music"
+            android:padding="8dp"
+            android:textSize="16dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:src="@mipmap/ic_launcher_round"/>
+                android:layout_height="wrap_content">
 
-        </android.support.v7.widget.CardView>
+                <!-- A CardView that contains a TextView -->
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardview2_1"
+                    android:layout_gravity="left"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    card_view:cardCornerRadius="4dp">
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardview1_2"
-            android:layout_gravity="left"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_margin="8dp"
-            card_view:cardCornerRadius="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/album21"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"/>
+                    <TextView
+                        android:id="@+id/label_album21"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@color/cardShadow"
+                        android:maxLines="1"
+                        android:text="Post Malone"/>
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/cart_outline"/>
 
-            <TextView
-                android:id="@+id/label_album1_2"
-                android:gravity="bottom"
-                android:layout_gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:textColor="@android:color/white"
-                android:background="@color/cardShadow"
-                android:maxLines="1"
-                android:text="Artist 2..."/>
+                </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardview2_2"
+                    android:layout_gravity="left"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="8dp"
+                    card_view:cardCornerRadius="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray"/>
+
+                    <TextView
+                        android:id="@+id/label_album2_2"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textColor="@android:color/white"
+                        android:background="@color/cardShadow"
+                        android:maxLines="1"
+                        android:text="(Just mock)..."/>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This screen shows the many options of content for the
+    user, including content he has access on the first gallery 'Your Music',
+    and content for sale, on the second gallery 'Discover New Music'"
+            android:textColor="@android:color/holo_red_dark"
+            android:padding="16dp"
+            android:textSize="14dp"/>
 
     </LinearLayout>
 
-
-
-    <TextView
-        android:id="@+id/label_newmusic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Discover New Music"
-        android:padding="8dp"
-        android:textSize="16dp"/>
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardview2_1"
-        android:layout_gravity="left"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_margin="8dp"
-        card_view:cardCornerRadius="4dp">
-
-        <TextView
-            android:id="@+id/info_text3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Teste3"/>
-
-    </android.support.v7.widget.CardView>
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="This screen shows the many options of content for the
-user, including content he has access on the first gallery 'Your Music',
-and content for sale, on the second gallery 'Discover New Music'"
-        android:textColor="@android:color/holo_red_dark"
-        android:padding="16dp"
-        android:textSize="14dp"/>
-
-
-</LinearLayout>
+</ScrollView>
