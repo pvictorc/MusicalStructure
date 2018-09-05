@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         CardView cv11 = (CardView) findViewById(R.id.cardview1_1);
-
         //I found this sintax is more clear
         cv11.setOnClickListener(myMusicListener);
 
